@@ -1,0 +1,56 @@
+Regras de negócio são políticas, normas, restrições, cálculos ou decisões 
+que determinam como uma organização deve funcionar e existe independentemente 
+de um software.
+
+Tipos
+1. Integridade e restrição	Determinam condições 
+obrigatórias sobre dados ou processos. 
+Ex.: todo empréstimo deve estar associado a um aluno.
+
+2. Cálculo e derivação	Estabelecem como valores são c
+alculados ou informações derivadas. Ex.: multa = dias de atraso × R$ 2.
+
+3. Decisão	Determinam uma decisão com base em uma condição. 
+Ex.: se o desconto ultrapassar 15%, exigir aprovação do gerente.
+
+4. Workflow (fluxo de trabalho)	Controlam etapas, estados e a ordem das
+atividades. Ex.: um pedido só pode ser concluído após o pagamento.
+
+5. Baseadas em eventos	Estabelecem ações quando determinado evento acontece. 
+Ex.: ao cancelar um pagamento, realizar o estorno.
+
+6. Legais e de conformidade	Estabelecem obrigações decorrentes de leis, regulamentos 
+ou normas. Ex.: registrar operações para atender a exigências de auditoria.
+
+7. Parametrizáveis	Possuem parâmetros que podem ser alterados sem mudar a lógica principal. 
+Ex.: limite máximo de empréstimos configurado pela administração.
+
+8. Proteção do negócio	Buscam evitar perdas, fraudes e erros operacionais. 
+Ex.: impedir o registro duplicado de pagamentos.
+
+
+Requisito de software é uma especificação de uma capacidade, 
+comportamento, característica, condição ou restrição que o sistema deve atender.
+
+
+Requisitos Não Funcionais
+
+Produto
+Características do software
+
+Organizacionais
+Políticas e padrões da organização
+
+Externos
+Leis, normas e obrigações externas
+
+Subcategoria:
+
+Desempenho	Tempo de resposta, processamento e capacidade de atender solicitações
+Segurança	Proteção dos dados, operações e acessos
+Disponibilidade	Capacidade de permanecer acessível quando necessário
+Confiabilidade	Capacidade de operar corretamente, inclusive diante de determinadas falhas
+Usabilidade	Facilidade e eficácia de utilização pelos usuários
+Compatibilidade	Capacidade de funcionar nos ambientes especificados
+Acessibilidade	Condições para utilização por pessoas com diferentes necessidades
+Manutenibilidade	Facilidade de modificar, corrigir e evoluir o software
