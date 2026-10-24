@@ -1,0 +1,192 @@
+SÍNTESE DE ESTUDOS — ANÁLISE E PROJETO DE SOFTWARE
+Revisão dos exercícios 1, 2 e 3 da Lista 05
+Base: materiais do professor João Choma — UEM
+
+============================================================
+1. PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
+============================================================
+
+Processo de Software: conjunto organizado de atividades, responsabilidades e procedimentos utilizados para desenvolver, entregar e manter um software de maneira sistemática, controlada e organizada.
+
+Finalidade: orientar o desenvolvimento, reduzir riscos e contribuir para que o software atenda às necessidades dos usuários.
+
+Quatro atividades básicas:
+
+1) Especificação
+   Identifica, analisa, documenta e valida requisitos e restrições do software.
+
+2) Projeto e implementação
+   Define a estrutura da solução e transforma o projeto em código executável.
+
+3) Validação
+   Avalia, por meio de revisões e testes, se o software atende às especificações e expectativas dos usuários.
+
+4) Evolução
+   Realiza modificações, correções e melhorias para atender a novas necessidades.
+
+Importante: essas atividades não precisam ocorrer uma única vez ou sempre em sequência rígida. Em processos iterativos, podem ser revisitadas durante o desenvolvimento.
+
+Processo de software x Modelo de processo:
+- Processo: estabelece atividades e responsabilidades.
+- Modelo de processo: organiza essas atividades ao longo do desenvolvimento, como nos modelos cascata, incremental ou espiral.
+
+Referência: aula02.pdf, páginas 8 a 15.
+
+============================================================
+2. REGRAS DE NEGÓCIO (RN)
+============================================================
+
+Regra de Negócio: política, norma, condição, cálculo ou restrição que determina como uma organização ou um domínio deve funcionar.
+
+Característica principal: existe independentemente da utilização de software.
+
+Exemplo:
+RN01 — Um aluno com mensalidade vencida não pode realizar novos agendamentos.
+
+Essa regra continuaria existindo mesmo se a academia registrasse os agendamentos em papel.
+
+Atenção: uma atividade do negócio não é necessariamente uma Regra de Negócio.
+- "A academia oferece aulas coletivas" descreve uma atividade ou capacidade.
+- "Um aluno não pode agendar aulas com horários conflitantes" estabelece uma restrição.
+
+============================================================
+3. REQUISITOS DE SOFTWARE
+============================================================
+
+Requisito de Software: especificação de uma funcionalidade, comportamento, qualidade ou restrição que o sistema deve atender.
+
+REQUISITO FUNCIONAL (RF)
+- Descreve funções, serviços e comportamentos que o sistema deve oferecer.
+- Pergunta: o que o sistema deve fazer?
+- Exemplo: o sistema deve permitir que o aluno reserve uma aula.
+
+REQUISITO NÃO FUNCIONAL (RNF)
+- Estabelece características de qualidade, condições ou restrições que o software deve atender.
+- Pergunta: quais qualidades ou restrições o sistema deve atender?
+- Exemplo: o sistema deve apresentar os resultados de uma consulta em até 2 segundos.
+
+Boas práticas:
+Os requisitos devem ser claros, consistentes e verificáveis.
+
+Exemplo inadequado: "O sistema deve ser rápido."
+Exemplo melhor: "O sistema deve apresentar os resultados em até 2 segundos."
+
+O segundo é mais verificável porque estabelece um limite mensurável.
+
+============================================================
+4. CATEGORIAS DOS REQUISITOS NÃO FUNCIONAIS
+============================================================
+
+CLASSIFICAÇÃO EM TRÊS GRUPOS (SOMMERVILLE)
+
+A) Requisitos de Produto
+Estabelecem características do próprio software e de seu comportamento durante a execução.
+Principais categorias: desempenho, confiabilidade, segurança e usabilidade. Também podem envolver disponibilidade, eficiência e uso de recursos.
+
+B) Requisitos Organizacionais
+Derivam de políticas, procedimentos e padrões da organização.
+Principais categorias: ambiente, desenvolvimento e operação.
+
+C) Requisitos Externos
+Derivam de fatores externos à organização e ao sistema.
+Principais categorias: regulatórios, legais e éticos.
+
+CARACTERÍSTICAS DE QUALIDADE FREQUENTES
+
+- Desempenho: tempo de resposta e capacidade de processamento.
+- Segurança: proteção de dados, usuários, operações e acessos.
+- Disponibilidade: capacidade de permanecer acessível e operacional.
+- Confiabilidade: capacidade de funcionar corretamente, inclusive diante de falhas.
+- Usabilidade: facilidade e eficiência da interação com usuários.
+- Eficiência e recursos: utilização de memória, processamento e outros recursos.
+- Compatibilidade: funcionamento em plataformas e ambientes determinados.
+- Acessibilidade: possibilidade de uso por pessoas com diferentes necessidades.
+- Manutenibilidade: facilidade para corrigir, modificar e evoluir o software.
+
+Exemplos:
+- Produto / Desempenho: a consulta deve apresentar resultados em até 2 segundos.
+- Produto / Segurança: o sistema deve exigir autenticação para acessar funcionalidades administrativas.
+- Organizacional / Desenvolvimento: o desenvolvimento deve seguir o padrão de documentação da organização.
+- Externo / Legal: o tratamento de dados pessoais deve atender à legislação aplicável.
+
+Diferença importante:
+- Disponibilidade: o sistema está acessível quando necessário?
+- Confiabilidade: o sistema opera corretamente e lida adequadamente com falhas?
+
+Um sistema pode estar disponível durante muito tempo, mas ainda apresentar erros frequentes.
+
+Referências: regras_negocio_requisitos.pdf, páginas 93 a 116; refinamento_requisito.pdf, páginas 21 a 24.
+
+============================================================
+5. RELAÇÃO ENTRE RN, RF E RNF
+============================================================
+
+Uma Regra de Negócio pode originar um ou mais Requisitos Funcionais, pois o software precisa implementar comportamentos que respeitem as condições estabelecidas pelo domínio.
+
+Exemplo:
+RN01 — Um aluno não pode reservar aulas com horários conflitantes.
+
+Requisitos funcionais derivados:
+RF01 — O sistema deve consultar as reservas existentes do aluno.
+RF02 — O sistema deve identificar e impedir reservas com horários conflitantes.
+
+Assim:
+- RN: estabelece uma condição ou restrição do domínio.
+- RF: pode definir os comportamentos necessários para o software respeitá-la.
+- RNF: pode estabelecer características de qualidade ou restrições técnicas relacionadas ao software.
+
+Nem todo requisito surge diretamente de uma RN: requisitos também podem surgir de necessidades dos usuários, objetivos do produto e restrições técnicas.
+
+============================================================
+6. DOCUMENTAÇÃO, RASTREABILIDADE E VALIDAÇÃO
+============================================================
+
+Documentação: registro organizado de requisitos, decisões, modelos e outras informações do projeto.
+
+Rastreabilidade: capacidade de identificar relações entre Regras de Negócio, requisitos, casos de uso, implementação e testes.
+
+Verificação: avaliação de conformidade com as especificações estabelecidas.
+
+Validação: avaliação da adequação do software às necessidades e expectativas dos usuários.
+
+A rastreabilidade facilita a análise de impacto: quando uma RN muda, ajuda a identificar quais requisitos, funcionalidades e testes podem precisar de revisão.
+
+Importante: documentação e rastreabilidade não são sinônimos. Documentar é registrar informações; rastrear é estabelecer e acompanhar suas relações.
+
+============================================================
+7. RESUMO PARA MEMORIZAR
+============================================================
+
+Processo de software: como organizar o desenvolvimento.
+Especificação: o que o software precisa atender.
+Projeto: como a solução será estruturada.
+Implementação: construção do software.
+Validação: atendimento às necessidades e expectativas.
+Evolução: adaptação e manutenção do software.
+Regra de Negócio: condições que governam o domínio.
+Requisito Funcional: o que o software deve fazer.
+Requisito Não Funcional: qualidades e restrições do software.
+Rastreabilidade: relações entre os artefatos do desenvolvimento.
+
+============================================================
+8. QUESTÕES DE REVISÃO
+============================================================
+
+1) Uma organização determina que clientes inadimplentes não podem contratar novos serviços. Isso é RN, RF ou RNF?
+
+2) Um único Requisito Funcional pode estar relacionado a várias Regras de Negócio? Explique.
+
+3) O software deve funcionar nas duas versões mais recentes de determinados navegadores. Qual é a característica de qualidade envolvida?
+
+4) Qual conceito permite identificar quais requisitos serão afetados pela mudança de uma Regra de Negócio?
+
+GABARITO
+
+1) RN: a condição pertence ao domínio e existe independentemente do software.
+2) Sim: um RF pode implementar comportamentos necessários para respeitar mais de uma RN, e uma RN pode originar diversos RFs.
+3) Compatibilidade.
+4) Rastreabilidade.
+
+============================================================
+FIM DA SÍNTESE
+============================================================
